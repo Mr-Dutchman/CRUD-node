@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        link
+    </title>
+</head>
+<body>
+    <h1> Welcome, new user</h1>
+    <h2> what profession are you looking for</h2>
+
+    <ul>
+        <li>
+            humans
+        </li>
+        <li>
+            humans
+        </li>
+        <li>
+            humans
+        </li>
+        <li>
+            humans
+        </li>
+        <li>
+            humans
+        </li>
+        <li>
+            humans
+        </li>
+        
+        
+    </ul>
+
+    <form>
+        <label>Other</label>
+        <input type ='text' id = 'search-txt'>
+        <input type="submit" id ="submit-btn">
+    </form>
+    
+
+</body>
+</html>

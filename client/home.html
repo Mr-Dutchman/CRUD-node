@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet"  href ="stylesheet.css">
+    <title>
+        link
+    </title>
+</head>
+<body>
+    <h1> Welcome, new user</h1>
+    <h2> what profession are you looking for?</h2>
+
+    <ul>
+        
+        <li>
+            <label>plumber</label>
+            <button onclick = 'get()' id ="plumber" value = 'plumber'>search</button>
+        </li>
+        <li>
+            <label>Mechanical Engineer</label>
+            <button onclick = 'get1()' id ="mechanic" value ="Mechanical Engineer">search</button>
+        </li>
+        <li>
+            <label>Sound Engineer</label>
+            <button onclick = 'get2()' id ="sound" value = 'Sound Engineer'>search</button>
+        </li>
+        <li>
+            <label>Driver</label>
+            <button onclick = 'get3()' id ="driver" value = " Driver">search</button>
+        </li>
+        <li>
+            <label>Programmer</label>
+            <button onclick = 'get4()' id ="programmer" value = "Programmer">search</button>
+        </li>
+       <!-- <li>
+            <label>humans</label>
+            <button onclick = 'get5()' id ="">search</button>
+        </li>-->
+        
+        
+    </ul>
+
+    <form>
+        <label>Other</label>
+        <input type ='text' id = 'search-txt'>
+        <input type="submit" id ="submit-btn">
+    </form>
+    
+
+</body>
+<script src = "./data.js"></script>
+</html>
