@@ -1,54 +1,83 @@
-document.getElementById("plumber").onclick = function get(){
-    var keyword = document.getElementById("plumber").value
-    console.log(keyword)
-    const data = {
-        Profession:keyword
-    }
-    const option = {
-        method: 'post',
-        headers:{
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    }
+// const value = document.getElementById('select')
+const display = document.getElementById('select-result')
+function select(clicked){
+    var click = clicked.toString()
+
+
+
+
     
+    
+    async function post(){
+        const response = await fetch(`http://localhost:8000/send?Profesion=${click}`)
+        var returnData = await response.json()
+        console.log(returnData)
+        if (response) {
+            hideloader();
+        }
+        show(returnData);
+    }
+
     post()
-    function post(){(fetch("http://localhost:8000/send", option))}
-    
-}
 
+    function hideloader() {
+        document.getElementById('select').style.display = 'none';
+    }
+        
+    function show(returnData) {
+        let tab = 
+            `<tr>
+              <th>Surname</th>
+              <th>First Name</th>
+              <th>Gender</th>
+              <th>Business Name</th>
+              <th> profession</th>
+             </tr>`;
+        // Loop to access all rows 
+        for (let r of returnData) {
+            tab += `<tr> 
+        <td>${r.Surname} </td>
+        <td>${r.Name}</td>
+        <td>${r.Gender}</td>
+        <td>${r.NameOfBusiness}</td>
+        <td>${r.Profession}</td>             
+        </tr>`;
+        }
+    // Setting innerHTML as tab variable
+    document.getElementById("result").innerHTML = tab;
+}
+}
+// var ref = { 
+// id: "60e353cc842477c06b828da8", 
+// Surname: "Fidelis",
+//  Name: "Ehis",
+// ​​
+// AddressOfBusiness: "sdg",
+// ​​
+// ClosestLandmark: "Uniben",
+// ​​
+// Date: "01/01/2020",
+// ​​
+// Gender: "male",
+// Name: "Ehis",
+// ​​
+// NameOfBusiness: "aff",
+// ​​
+// PhoneNumber: "07060464123",
+// ​​
+// Profession: "Plumber",
+// ​​
+// Surname: "Fidelis",
+// ​​
+// USerEmail: "meelisfidelis@gmail.com" ,
 
-// const option = {
-//     method: 'get',
-//     headers:{
-//         'Content-Type': 'application/json'
-//     },
-    
-// }    
-// fetch("http://localhost:8000/", option)
+            
+// }
 
-
-document.getElementById("mechanic").onclick = function get1(){
-    var data = document.getElementById("mechanic").value
-    console.log(data)
-    // fetch("http://localhost:8000/", data)
-    // const data = document.getElementById('data').innerHTML= response
-}
-document.getElementById("sound").onclick = function get2(){
-    var data = document.getElementById("sound").value
-    console.log(data)
-    // fetch("http://localhost:8000/", data)
-    // const data = document.getElementById('data').innerHTML= response
-}
-document.getElementById("driver").onclick = function get3(){
-    var data = document.getElementById("driver").value
-    console.log(data)
-    // fetch("http://localhost:8000/", data)
-    // const data = document.getElementById('data').innerHTML= response
-}
-document.getElementById("programmer").onclick = function get4(){
-    var data = document.getElementById("programmer").value
-    console.log(data)
-    // fetch("http://localhost:8000/", data)
-    // const data = document.getElementById('data').innerHTML= response
-}
+document.addEventListener('submit', function(e) {
+    e.preventDefault()
+        console.log('form submitted')
+    search = document.getElementById('search-txt').value
+    post()
+    function post(){(fetch("http://localhost:8000/send", search))}
+})

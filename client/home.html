@@ -9,45 +9,48 @@
     </title>
 </head>
 <body>
-    <h1> Welcome, new user</h1>
-    <h2> what profession are you looking for?</h2>
+    <main id = "main">
+        <h1> Welcome, new user</h1>
+        <h2> what profession are you looking for?</h2>
 
-    <ul>
-        
-        <li>
-            <label>plumber</label>
-            <button onclick = 'get()' id ="plumber" value = 'plumber'>search</button>
-        </li>
-        <li>
-            <label>Mechanical Engineer</label>
-            <button onclick = 'get1()' id ="mechanic" value ="Mechanical Engineer">search</button>
-        </li>
-        <li>
-            <label>Sound Engineer</label>
-            <button onclick = 'get2()' id ="sound" value = 'Sound Engineer'>search</button>
-        </li>
-        <li>
-            <label>Driver</label>
-            <button onclick = 'get3()' id ="driver" value = " Driver">search</button>
-        </li>
-        <li>
-            <label>Programmer</label>
-            <button onclick = 'get4()' id ="programmer" value = "Programmer">search</button>
-        </li>
-       <!-- <li>
-            <label>humans</label>
-            <button onclick = 'get5()' id ="">search</button>
-        </li>-->
-        
-        
-    </ul>
+        <p id = 'select'>        
+                <label>plumber</label>
+                
+                <button onclick = 'select(this.id)' id ="Plumber" value = "Plumber">search</button>
+                <br/>
+            
+                <label>Mechanical Engineer</label>
+                
+                <button onclick = 'select(this.id)' id ="Mechanic" value ="Mechanical Engineer">search</button>
+                <br/>
+                <label>Sound Engineer</label>
+                <button onclick = 'select(this.id)' id ="Sound" value = "Sound Engineer">search</button>
+                <br/>
+                <label>Driver</label>
+                <button onclick = 'select(this.id)' id ="Driver" value = "Driver">search</button>
+                <br/>
+                <label>Programmer</label>
+                <button onclick = 'select(this.id)' id ="Programmer" value = "Programmer">search</button>
+                <br/>
+            <!-- <li>
+                <label>humans</label>
+                <button onclick = 'get5()' id ="">search</button>
+            </li>-->
+            
+        </p>    
+        <br/>
+        <form id ='form'>
+            <label>Other</label>
+            <input type ='text' id = 'search-txt'>
+            <input type="submit" id ="submit-btn">
+        </form>
 
-    <form>
-        <label>Other</label>
-        <input type ='text' id = 'search-txt'>
-        <input type="submit" id ="submit-btn">
-    </form>
-    
+
+        <table
+            id = 'result'>
+        </table>
+        <a href="./reg.html">join us</a>
+    </main>
 
 </body>
 <script src = "./data.js"></script>

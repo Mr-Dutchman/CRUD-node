@@ -14,7 +14,7 @@ const myForm = document.querySelector('form')
 
 document.addEventListener('submit', function(e) {
     e.preventDefault()
-        console.log('form submitted')
+        alert('form submitted')
         
 
     var LastName = form.surname.value
