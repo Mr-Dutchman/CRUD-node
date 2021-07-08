@@ -14,11 +14,11 @@ const MongoClient = require('mongodb').MongoClient
 // }
 //}
 
-async function insertMultipleListing(client,newListing){
-    const result = await client.db("Admin").collection("users").insertMany(newListing)
-    console.log(`$(result.insertCount) new listing was created with the following id ($):`)
-    console.log(result.insertedIds)
-}
+// async function insertMultipleListing(client, newListing){
+//     const result = await client.db("Admin").collection("users").insertMany(newListing)
+//     console.log(`$(result.insertCount) new listing was created with the following id ($):`)
+//     console.log(result.insertedIds)
+// }
 
 
 // async function listDatabases(client){
