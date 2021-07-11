@@ -2,10 +2,10 @@
   "name": "link",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/app.js",
+  "main": "./backend/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "web": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +14,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.6"
-  }
+  },
+
+"engines":{
+  "node" :"10.19.0"
+}
 }

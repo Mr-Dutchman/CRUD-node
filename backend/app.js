@@ -94,4 +94,4 @@ async function findOnelistingByName(client, nameOfListing){
     }
 }
  
-app.listen(8000, () => console.log('server is working'))
+app.listen(3000, () => console.log('server is working'))
