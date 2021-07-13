@@ -2,10 +2,13 @@
   "name": "link",
   "version": "1.0.0",
   "description": "This is a database management system",
-  "main": "./app.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
+  },
+  "engines": {
+    "node": "10.16.0"
   },
   "keywords": ["javascript","mongo"],
   "author": "",
