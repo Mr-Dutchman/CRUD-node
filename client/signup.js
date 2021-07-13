@@ -61,7 +61,7 @@ document.addEventListener('submit', function(e) {
     //console.log(userData)
 
     document.addEventListener('submit', function(){
-        fetch('http://localhost:8000/insert', option).then(response =>{
+        fetch('http://localhost:3000/insert', option).then(response =>{
             console.log(response.body.getReader())
         })
 
