@@ -20,7 +20,12 @@ var corsOptions = {
 app.use(cors())
 app.use(express.static('public'))
 app.use(express.json({limit : '1mb'}));
+client.connect().then(res => {
+    app.listen(3000, () => console.log('server is working'))
 
+}).catch(err => {
+    console.log(err)
+})
 
 //
 app.post('/insert',  async (request, response, next) => {
@@ -29,22 +34,17 @@ app.post('/insert',  async (request, response, next) => {
     
     console.log("I got a request");
     console.log(request.body)
-    try{
-        await client.connect()
-        // .then(console.log('connection to Database successful:'))
-        await createListing(client, newListing)
-        
-    }
 
-    catch(e){
-        console.error(e)
-    }finally{
-        //console.log('connected')
-        await client.close()
-    }
-    response.json({
+    try {
+     // .then(console.log('connection to Database successful:'))
+     let res = await createListing(client, newListing)
+     response.json({
         status : 'success'
     })
+    } catch(err){
+        console.log(err)
+    }
+  
 
     
 })
@@ -59,16 +59,12 @@ app.get('/send', async (request, response, next) => {
     console.log(nameOfListing)   
     
     try{
-        await client.connect().then(console.log('connection to Database successful:'))
         const returnData = await findOnelistingByName(client, nameOfListing)
         response.json(returnData)
     }
 
     catch(e){
         console.error(e)
-    }finally{
-        console.log('connected')
-        await client.close()
     }
 })
 
@@ -76,22 +72,12 @@ app.get('/send', async (request, response, next) => {
 
 //Functions for the database
 
-async function createListing(client, newListing){
-    const result = await client.db("Link").collection("users").insertOne(newListing)
-    console.log(`new listing created with the following id: ${result._id}`)
+function createListing(client, newListing){
+    return client.db("Link").collection("users").insertOne(newListing)
 }
 
-async function findOnelistingByName(client, nameOfListing){
-    const result = await client.db("Link").collection("users").find({Profession : nameOfListing}).sort({name: 1 })
-    .toArray()
+function findOnelistingByName(client, nameOfListing){
+    return client.db("Link").collection("users").find({Profession : nameOfListing}).sort({name: 1 })
+    .toArray();
     
-
-    if (result) {
-        console.log(`Found a listing in the collection with the profession "${nameOfListing}"`)
-        return result
-    }else {
-        console.log(`"No listing found in the collection with the name "${nameOfListing}"`)
-    }
 }
- 
-app.listen(3000, () => console.log('server is working'))
