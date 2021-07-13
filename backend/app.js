@@ -17,10 +17,11 @@ var corsOptions = {
 
 
 
-app.use(cors())
-app.use(express.static('public'))
-app.use(express.json({limit : '1mb'}));
+
 client.connect().then(res => {
+    app.use(cors())
+    app.use(express.static('public'))
+    app.use(express.json({limit : '1mb'}));
     app.listen(3000, () => console.log('server is working'))
 
 }).catch(err => {
