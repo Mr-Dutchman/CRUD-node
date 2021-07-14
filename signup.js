@@ -14,7 +14,7 @@ const myForm = document.querySelector('form')
 
 document.addEventListener('submit', function(e) {
     e.preventDefault()
-        alert('form submitted')
+        //alert('form submitted')
         
 
     var LastName = form.surname.value
@@ -67,6 +67,7 @@ document.addEventListener('submit', function(e) {
 
     })
    })
+   
     
 
     function valid() {
