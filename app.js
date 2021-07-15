@@ -83,5 +83,4 @@ async function findOnelistingByName(client, nameOfListing){
         console.log(`"No listing found in the collection with the name "${nameOfListing}"`)
     }
 }
- 
 app.listen(3000, () => console.log('server is working'))
