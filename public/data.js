@@ -9,7 +9,7 @@ function select(clicked){
     
     
     async function post(){
-        const response = await fetch(`http://localhost:3000/send?Profesion=${click}`)
+        const response = await fetch(`http://localhost:8080/send?Profesion=${click}`)
         var returnData = await response.json()
         console.log(returnData)
         if (response) {
@@ -53,7 +53,7 @@ document.addEventListener('submit', function(e) {
     search = document.getElementById('search-txt').value
 
     async function post(){
-        const response = await fetch(`http://localhost:3000/send?Profesion=${search}`)
+        const response = await fetch(`http://localhost:8080/send?Profesion=${search}`)
         var returnData = await response.json()
         console.log(returnData)
         if (response) {
