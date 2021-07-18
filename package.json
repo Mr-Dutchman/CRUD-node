@@ -6,16 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
-    
-
-
-  },
+    },
   "engines": {
     "node": "10.16.0"
-
   },
   "keywords": ["javascript", "mongo"],
-  "author": "",
+  "author": "Ehis Fidelis",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
