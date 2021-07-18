@@ -1,5 +1,5 @@
 var port = process.env.PORT || 5000;
-var host = '0.0.0.0'
+var host = process.env.HOST || '0.0.0.0'
 const express = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient
