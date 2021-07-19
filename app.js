@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient
 const cors =require('cors');
 const uri = "mongodb+srv://UserInfo:user@cluster0.9rp5m.mongodb.net/user?retryWrites=true&w=majority"
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
     console.log(`server is working ${PORT}`)
 })
 

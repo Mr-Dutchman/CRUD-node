@@ -7,7 +7,7 @@
 // const search = document.querySelector('submit-btn')
 // onclick.addEventListener("sumit")
 
-const API = process.env.NODE_ENV === 'production' ? 'https://linkmetoyou.herokuapp.com/api' : 'http://localhost:5000/api';
+//const API = process.env.NODE_ENV === 'production' ? 'https://linkmetoyou.herokuapp.com/api' : 'http://localhost:5000/api';
 
 
 const myForm = document.querySelector('form')
