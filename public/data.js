@@ -9,7 +9,7 @@ function select(clicked){
     
     
     async function post(){
-        const response = await fetch(`https://linkmetoyou.herokuapp.com//send?Profesion=${click}`)
+        const response = await fetch(`https://linkmetoyou.herokuapp.com/send?Profesion=${click}`)
         var returnData = await response.json()
         console.log(returnData)
         if (response) {
