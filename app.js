@@ -1,11 +1,12 @@
+const PORT = process.env.PORT || 5000
 const express = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient
 const cors =require('cors');
 const uri = "mongodb+srv://UserInfo:user@cluster0.9rp5m.mongodb.net/user?retryWrites=true&w=majority"
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
-app.listen(process.env.PORT || 5000, '0.0.0.0', () => {
-    console.log('server is working')
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`server is working ${PORT}`)
 })
 
 app.use(cors())
