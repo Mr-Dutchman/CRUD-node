@@ -1,58 +1,58 @@
 main{
-    width: 50%;
-    margin: 50px auto; 
-    text-align: center;
-    
+  width: 50%;
+  margin: 50px auto; 
+  text-align: center;
+  
 }
 table {
-    margin: 50px auto;
+  margin: 50px auto;
 }
 table, th, td{
-    border-collapse: collapse;
-    border: 1px solid #000;
+  border-collapse: collapse;
+  border: 1px solid #000;
 
 
 }
 th,td{
-    padding: 5px;
+  padding: 5px;
 
 }
 
 #header{
-    Background-color: #538d1d;
-    color: #ffffff;
-    Text-align: center;
-    margin: 0;
+  Background-color: #538d1d;
+  color: #ffffff;
+  Text-align: center;
+  margin: 0;
 }
 #main{
-  width: 800px;
-  margin-left:auto;
-  margin-right :auto;
+width: 800px;
+margin-left:auto;
+margin-right :auto;
 }
 
 .form-submit-button{
-  background: #4CAF50; /* Green */
-  border-style: outset;
-  border-color: #0066A2;
-  color: white;
-  height : 50px;
-  width : 100px;
-  font:bold 15px, sans-serif;
-  text-shadow: none;
+background: #4CAF50; /* Green */
+border-style: outset;
+border-color: #0066A2;
+color: white;
+height : 50px;
+width : 100px;
+font:bold 15px, sans-serif;
+text-shadow: none;
 }
 #footer{
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  margin:0;
-  width : 100%;
-  
+background-color: #000;
+color: #fff;
+text-align: center;
+margin:0;
+width : 100%;
+
 }
 
 form input.error {
-  border-color: #e74c3c
+border-color: #e74c3c
 }
 
 form input.success {
-  border-color: #c3e6cb
+border-color: #c3e6cb
 }

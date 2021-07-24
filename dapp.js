@@ -10,11 +10,6 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 //
 
-var corsOptions = {
-    origin: '*',
-    optionsSuccessStatus : 200
-}
-
 
 app.use(express.json({limit : '1mb'}));
 

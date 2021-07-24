@@ -1,4 +1,4 @@
-// const value = document.getElementById('select')
+//const value = document.getElementById('select')
 const display = document.getElementById('select-result')
 function select(clicked){
     var click = clicked.toString()
@@ -9,7 +9,7 @@ function select(clicked){
     
     
     async function post(){
-        const response = await fetch(`https://linkmetoyou.herokuapp.com/send?Profesion=${click}`)
+        const response = await fetch(`http://localhost:5000/send?Profesion=${click}`)
         var returnData = await response.json()
         console.log(returnData)
         if (response) {
@@ -31,7 +31,7 @@ function select(clicked){
               <th>First Name</th>
               <th>Gender</th>
               <th>Business Name</th>
-              <th> profession</th>
+              <th>Contact</th>
              </tr>`;
         // Loop to access all rows 
         for (let r of returnData) {
@@ -40,7 +40,7 @@ function select(clicked){
         <td>${r.Name}</td>
         <td>${r.Gender}</td>
         <td>${r.NameOfBusiness}</td>
-        <td>${r.Profession}</td>             
+        <td><button id ="connect"> connect</button></td>             
         </tr>`;
         }
     // Setting innerHTML as tab variable
@@ -53,7 +53,7 @@ document.addEventListener('submit', function(e) {
     search = document.getElementById('search-txt').value
 
     async function post(){
-        const response = await fetch(`https://linkmetoyou.herokuapp.com/send?Profesion=${search}`)
+        const response = await fetch(`http://localhost:5000/send?Profesion=${search}`)
         var returnData = await response.json()
         console.log(returnData)
         if (response) {
@@ -89,3 +89,4 @@ document.addEventListener('submit', function(e) {
         }
     }
 })
+

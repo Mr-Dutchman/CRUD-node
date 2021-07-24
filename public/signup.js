@@ -1,20 +1,8 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     fetch('http://localhost:8000/')
-    
-    
-// })
-// const { response } = require("express")
-// const search = document.querySelector('submit-btn')
-// onclick.addEventListener("sumit")
-
-//const API = process.env.NODE_ENV === 'production' ? 'https://linkmetoyou.herokuapp.com/api' : 'http://localhost:5000/api';
-
-
 const myForm = document.querySelector('form')
 
 document.addEventListener('submit', function(e) {
     e.preventDefault()
-        //alert('form submitted')
+    
         
 
     var LastName = form.surname.value
@@ -61,14 +49,10 @@ document.addEventListener('submit', function(e) {
     //console.log(userData)
 
     document.addEventListener('submit', function(){
-        fetch('http://linkmetoyou.herokuapp.com/insert', option).then(response =>{
+        fetch('http://localhost:5000/insert', option).then(response =>{
             console.log(response.body.getReader())
         })
-
     })
-   })
-   
-    
 
     function valid() {
         if(surname == null){
@@ -91,4 +75,4 @@ document.addEventListener('submit', function(e) {
             return false;
         }
     }
-
+})
